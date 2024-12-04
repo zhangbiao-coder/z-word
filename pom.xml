@@ -12,8 +12,8 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <poi.version>5.2.3</poi.version>
-        <xdocreport.version>2.0.4</xdocreport.version>
+        <poi.version>5.3.0</poi.version>
+        <xdocreport.version>2.1.0</xdocreport.version>
         <rabbit.common.version>2.6.6</rabbit.common.version>
     </properties>
 
@@ -47,11 +47,11 @@
             </exclusions>
         </dependency>
 
-        <dependency>
+        <!--<dependency>
             <groupId>fr.opensagres.xdocreport</groupId>
             <artifactId>fr.opensagres.xdocreport.converter.docx.xwpf</artifactId>
             <version>${xdocreport.version}</version>
-        </dependency>
+        </dependency>-->
         <!-- xdocreport end -->
 
         <dependency>
@@ -69,7 +69,7 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.12</version>
+            <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
