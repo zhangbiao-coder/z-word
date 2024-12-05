@@ -22,8 +22,21 @@ public class WordTest {
 
     @Test
     public void docxToHtml() throws Exception {
-        try (Docx docx = Words.docxTo(new FileResource("file:/D:/b.docx").getInputStream())) {
-            docx.html().saveTo("D:/b.html");
+        try (Docx docx = Words.docxTo(new FileResource("file:/C:/temp/zwordTest.docx").getInputStream())) {
+            docx.html().saveTo("C:/temp/zwordTest.html");
+        }
+    }
+
+    @Test
+    public void xWord2() throws Exception {
+        List<Map<String, String>> list = getRes();
+        try (TemplateProcess templateProcess = Words.ofTemplate(new FileResource("file:/C:/temp/zwordTest.docx").getInputStream())) {
+            templateProcess
+                    .addParam("a", "測試到處\nl\n我在测试啦啦啦")
+                    .addParam("b", "bbbbbbbbbbbbbbbbbbbbbbb")
+                    .addParam("c", "ccccccccccccccccccccccc")
+                    .addImg(new int[]{0, 0, 0}, new FileResource("file:/C:/Users/张彪/Pictures/1087462.jpg").getInputStream())
+                    .saveTo("C:/temp/zwordTestSuccess.docx");
         }
     }
 
