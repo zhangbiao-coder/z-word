@@ -4,18 +4,18 @@ import com.github.chengyuxing.common.io.IOutput;
 import com.gitee.seeme0726.word.common.IoCommonUtil;
 import com.gitee.seeme0726.word.common.TemplateUtil;
 import com.gitee.seeme0726.word.common.WordCommonUtil;
+import fr.opensagres.xdocreport.core.io.IOUtils;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import org.apache.poi.openxml4j.opc.PackagePart;
 import org.apache.poi.util.Units;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
+import org.apache.poi.xwpf.usermodel.XWPFPictureData;
 import org.apache.poi.xwpf.usermodel.XWPFTable;
 import org.apache.poi.xwpf.usermodel.XWPFTableCell;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.math.RoundingMode;
 import java.text.NumberFormat;
 import java.util.HashMap;
@@ -187,6 +187,32 @@ public class TemplateProcess implements IOutput, AutoCloseable {
         addImg(tablePlaceholderIndex, inputStream, "default.png");
         return this;
     }
+
+    /**
+     * 替换文档中的指定下标图片
+     * @param pictureIndex 要替换的图片的下标序号，从0开始
+     * @param newImageStream 新图片的输入流
+     * @return this
+     * @throws IOException IOException
+     * @throws InvalidFormatException InvalidFormatException
+     */
+    public TemplateProcess replaceImg(int pictureIndex, InputStream newImageStream) throws IOException, InvalidFormatException {
+        // 1. 收集文档中所有图片及其相关信息
+        List<XWPFPictureData> allPictures = document.getAllPictures();
+        // 2. 检查索引有效性
+        if (pictureIndex < 0 || pictureIndex >= allPictures.size()) {
+            throw new IndexOutOfBoundsException("图片索引超出范围。文档包含 " + allPictures.size() + " 张图片。");
+        }
+        // 3. 获取目标图片信息
+        XWPFPictureData pictureData = allPictures.get(pictureIndex);
+        PackagePart packagePart = pictureData.getPackagePart();
+        // 4. 用新图片覆盖原始数据 (保持相同格式!)
+        try (OutputStream outputStream = packagePart.getOutputStream()) {
+            IOUtils.copy(newImageStream, outputStream);
+        }
+        return this;
+    }
+
 
 
     @Override

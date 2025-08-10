@@ -74,4 +74,21 @@ public class WordTest {
         return list;
     }
 
+
+
+    @Test
+    public void xWord3() throws Exception {
+        List<Map<String, String>> list = getRes();
+        try (TemplateProcess templateProcess = Words.ofTemplate(new FileResource("file:/C:/temp/zwordTest.docx").getInputStream())) {
+            templateProcess
+                    .addParam("a", "測試到處\nl\n我在测试啦啦啦")
+                    .addParam("b", "bbbbbbbbbbbbbbbbbbbbbbb")
+                    .addParam("c", "ccccccccccccccccccccccc")
+                    .addImg(new int[]{0, 0, 0}, new FileResource("file:/C:/temp/2.png").getInputStream())
+                    .replaceImg(0,new FileResource("file:/C:/temp/1.gif").getInputStream())
+                    .saveTo("C:/temp/zwordTestSuccess.docx");
+        }
+    }
+
+
 }

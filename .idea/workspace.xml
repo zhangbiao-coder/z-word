@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31b13a32-48a5-4868-981a-8c181691bd9f" name="更改" comment="更新file路径" />
+    <list default="true" id="31b13a32-48a5-4868-981a-8c181691bd9f" name="更改" comment="更新依赖版本">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gitee/seeme0726/word/io/TemplateProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gitee/seeme0726/word/io/TemplateProcess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zb/WordTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zb/WordTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +18,25 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;zhangbiao-coder&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/zhangbiao-coder/z-word.git&quot;,
+    &quot;accountId&quot;: &quot;b66b67b9-7e59-43e7-aabd-25ffd86593d7&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="false" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="MavenRunner">
     <option name="skipTests" value="true" />
@@ -26,28 +51,68 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.WordTest.xWord.executor": "Run",
-    "Maven.z-word [clean].executor": "Run",
-    "Maven.z-word [compile].executor": "Run",
-    "Maven.z-word [install].executor": "Run",
-    "Maven.z-word [package].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/project/ideaproject/z-word",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Facet",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.WordTest.docToHtml.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WordTest.docxToHtml.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WordTest.xWord.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WordTest.xWord2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WordTest.xWord3.executor&quot;: &quot;Debug&quot;,
+    &quot;Maven.z-word [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.z-word [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.z-word [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.z-word [package].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/zhangbiao/IdeaProjects/mg-app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;库&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.40114942&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RunManager">
+}</component>
+  <component name="RunManager" selected="JUnit.WordTest.xWord3">
+    <configuration name="WordTest.docToHtml" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="z-word" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zb" />
+      <option name="MAIN_CLASS_NAME" value="com.zb.WordTest" />
+      <option name="METHOD_NAME" value="docToHtml" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WordTest.docxToHtml" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="z-word" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zb" />
+      <option name="MAIN_CLASS_NAME" value="com.zb.WordTest" />
+      <option name="METHOD_NAME" value="docxToHtml" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="WordTest.xWord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="z-word" />
       <extension name="coverage">
@@ -64,8 +129,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WordTest.xWord2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="z-word" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zb" />
+      <option name="MAIN_CLASS_NAME" value="com.zb.WordTest" />
+      <option name="METHOD_NAME" value="xWord2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WordTest.xWord3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="z-word" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zb" />
+      <option name="MAIN_CLASS_NAME" value="com.zb.WordTest" />
+      <option name="METHOD_NAME" value="xWord3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WordTest.xWord3" />
+        <item itemvalue="JUnit.WordTest.xWord2" />
+        <item itemvalue="JUnit.WordTest.docxToHtml" />
+        <item itemvalue="JUnit.WordTest.docToHtml" />
         <item itemvalue="JUnit.WordTest.xWord" />
       </list>
     </recent_temporary>
@@ -73,8 +174,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
-        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+        <option value="bundled-jdk-9823dce3aa75-fdfe4dae3a2d-intellij.indexing.shared.core-IU-243.22562.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-IU-243.22562.145" />
       </set>
     </attachedChunks>
   </component>
@@ -91,6 +192,26 @@
       <workItem from="1732096478855" duration="11000" />
       <workItem from="1732182493882" duration="1736000" />
       <workItem from="1732184285449" duration="147000" />
+      <workItem from="1733214851473" duration="21000" />
+      <workItem from="1733214881593" duration="748000" />
+      <workItem from="1733274695491" duration="5630000" />
+      <workItem from="1733325533979" duration="2388000" />
+      <workItem from="1733327941241" duration="8929000" />
+      <workItem from="1733801777778" duration="110000" />
+      <workItem from="1733801945743" duration="50000" />
+      <workItem from="1738906814313" duration="3745000" />
+      <workItem from="1741754923154" duration="54000" />
+      <workItem from="1744183833100" duration="647000" />
+      <workItem from="1747980020886" duration="58000" />
+      <workItem from="1750841138523" duration="5486000" />
+      <workItem from="1751007864163" duration="465000" />
+      <workItem from="1751266423435" duration="972000" />
+      <workItem from="1751267433435" duration="24000" />
+      <workItem from="1751267684410" duration="89000" />
+      <workItem from="1751268115565" duration="4000" />
+      <workItem from="1754658767692" duration="24835000" />
+      <workItem from="1754783963604" duration="1791000" />
+      <workItem from="1754785941302" duration="10342000" />
     </task>
     <task id="LOCAL-00001" summary="允许字符串分段">
       <option name="closed" value="true" />
@@ -132,7 +253,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731474987670</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="升级版本">
+      <option name="closed" value="true" />
+      <created>1733328062046</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1733328062046</updated>
+    </task>
+    <task id="LOCAL-00007" summary="更新依赖版本">
+      <option name="closed" value="true" />
+      <created>1733388340350</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1733388340350</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -142,6 +279,12 @@
     <MESSAGE value="允许字符串分段" />
     <MESSAGE value="更新包名" />
     <MESSAGE value="更新file路径" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新file路径" />
+    <MESSAGE value="升级版本" />
+    <MESSAGE value="更新依赖版本" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新依赖版本" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
