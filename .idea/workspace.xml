@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31b13a32-48a5-4868-981a-8c181691bd9f" name="更改" comment="更新依赖版本">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="31b13a32-48a5-4868-981a-8c181691bd9f" name="更改" comment="更新依赖版本,新增替换文档中图片的方法，保留原图片的的位置，大小，布局浮动等属性">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gitee/seeme0726/word/io/TemplateProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gitee/seeme0726/word/io/TemplateProcess.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/zb/WordTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zb/WordTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,35 +49,36 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.WordTest.docToHtml.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.WordTest.docxToHtml.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.WordTest.xWord.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.WordTest.xWord2.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.WordTest.xWord3.executor&quot;: &quot;Debug&quot;,
-    &quot;Maven.z-word [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.z-word [compile].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.z-word [install].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.z-word [package].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/zhangbiao/IdeaProjects/mg-app&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;库&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.40114942&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.WordTest.docToHtml.executor": "Run",
+    "JUnit.WordTest.docxToHtml.executor": "Run",
+    "JUnit.WordTest.xWord.executor": "Run",
+    "JUnit.WordTest.xWord2.executor": "Run",
+    "JUnit.WordTest.xWord3.executor": "Run",
+    "JUnit.WordTest.xWord4.executor": "Debug",
+    "Maven.z-word [clean].executor": "Run",
+    "Maven.z-word [compile].executor": "Run",
+    "Maven.z-word [install].executor": "Run",
+    "Maven.z-word [package].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/zhangbiao/IdeaProjects/mg-app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "库",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.40114942",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="JUnit.WordTest.xWord3">
     <configuration name="WordTest.docToHtml" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="z-word" />
@@ -108,22 +107,6 @@
       <option name="PACKAGE_NAME" value="com.zb" />
       <option name="MAIN_CLASS_NAME" value="com.zb.WordTest" />
       <option name="METHOD_NAME" value="docxToHtml" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WordTest.xWord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="z-word" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.zb.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.zb" />
-      <option name="MAIN_CLASS_NAME" value="com.zb.WordTest" />
-      <option name="METHOD_NAME" value="xWord" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -161,13 +144,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WordTest.xWord4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="z-word" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.zb.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.zb" />
+      <option name="MAIN_CLASS_NAME" value="com.zb.WordTest" />
+      <option name="METHOD_NAME" value="xWord4" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.WordTest.xWord3" />
+        <item itemvalue="JUnit.WordTest.xWord4" />
         <item itemvalue="JUnit.WordTest.xWord2" />
         <item itemvalue="JUnit.WordTest.docxToHtml" />
         <item itemvalue="JUnit.WordTest.docToHtml" />
-        <item itemvalue="JUnit.WordTest.xWord" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +210,7 @@
       <workItem from="1751268115565" duration="4000" />
       <workItem from="1754658767692" duration="24835000" />
       <workItem from="1754783963604" duration="1791000" />
-      <workItem from="1754785941302" duration="10342000" />
+      <workItem from="1754785941302" duration="13593000" />
     </task>
     <task id="LOCAL-00001" summary="允许字符串分段">
       <option name="closed" value="true" />
@@ -269,7 +268,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733388340350</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="更新依赖版本,新增替换文档中图片的方法，保留原图片的的位置，大小，布局浮动等属性">
+      <option name="closed" value="true" />
+      <created>1754798152283</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1754798152283</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,7 +288,8 @@
     <MESSAGE value="更新file路径" />
     <MESSAGE value="升级版本" />
     <MESSAGE value="更新依赖版本" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新依赖版本" />
+    <MESSAGE value="更新依赖版本,新增替换文档中图片的方法，保留原图片的的位置，大小，布局浮动等属性" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新依赖版本,新增替换文档中图片的方法，保留原图片的的位置，大小，布局浮动等属性" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

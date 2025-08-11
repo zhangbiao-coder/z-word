@@ -1,4 +1,5 @@
 package com.zb;
+
 import com.github.chengyuxing.common.io.FileResource;
 import com.gitee.seeme0726.word.Words;
 import com.gitee.seeme0726.word.io.TemplateProcess;
@@ -6,10 +7,12 @@ import com.gitee.seeme0726.word.to.Doc;
 import com.gitee.seeme0726.word.to.Docx;
 import org.junit.Test;
 
+import java.io.ByteArrayInputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.IntStream;
 
 public class WordTest {
 
@@ -75,7 +78,6 @@ public class WordTest {
     }
 
 
-
     @Test
     public void xWord3() throws Exception {
         List<Map<String, String>> list = getRes();
@@ -85,7 +87,21 @@ public class WordTest {
                     .addParam("b", "bbbbbbbbbbbbbbbbbbbbbbb")
                     .addParam("c", "ccccccccccccccccccccccc")
                     .addImg(new int[]{0, 0, 0}, new FileResource("file:/C:/temp/2.png").getInputStream())
-                    .replaceImg(0,new FileResource("file:/C:/temp/1.gif").getInputStream())
+                    .replaceImg(0, new FileResource("file:/C:/temp/1.gif").getInputStream())
+                    .saveTo("C:/temp/zwordTestSuccess.docx");
+        }
+    }
+
+    @Test
+    public void xWord4() throws Exception {
+        List<Map<String, String>> list = getRes();
+        try (TemplateProcess templateProcess = Words.ofTemplate(new FileResource("file:/C:/temp/zwordTest.docx").getInputStream())) {
+            templateProcess
+                    .addParam("a", "測試到處\nl\n我在测试啦啦啦")
+                    .addParam("b", "bbbbbbbbbbbbbbbbbbbbbbb")
+                    .addParam("c", "ccccccccccccccccccccccc")
+                    .addImg(new int[]{0, 0, 0}, new FileResource("file:/C:/temp/2.png").getInputStream())
+                    .replaceImg(0, new ByteArrayInputStream(new byte[0]))
                     .saveTo("C:/temp/zwordTestSuccess.docx");
         }
     }
