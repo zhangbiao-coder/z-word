@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31b13a32-48a5-4868-981a-8c181691bd9f" name="更改" comment="回退5.3.0版本">
+    <list default="true" id="31b13a32-48a5-4868-981a-8c181691bd9f" name="更改" comment="回退5.2.3版本">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -209,7 +210,7 @@
       <workItem from="1754658767692" duration="24835000" />
       <workItem from="1754783963604" duration="1791000" />
       <workItem from="1754785941302" duration="15108000" />
-      <workItem from="1754892396154" duration="2222000" />
+      <workItem from="1754892396154" duration="4484000" />
     </task>
     <task id="LOCAL-00001" summary="允许字符串分段">
       <option name="closed" value="true" />
@@ -291,7 +292,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754892850635</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="回退5.2.3版本">
+      <option name="closed" value="true" />
+      <created>1754897728453</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1754897728453</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +314,8 @@
     <MESSAGE value="更新依赖版本" />
     <MESSAGE value="更新依赖版本,新增替换文档中图片的方法，保留原图片的的位置，大小，布局浮动等属性" />
     <MESSAGE value="回退5.3.0版本" />
-    <option name="LAST_COMMIT_MESSAGE" value="回退5.3.0版本" />
+    <MESSAGE value="回退5.2.3版本" />
+    <option name="LAST_COMMIT_MESSAGE" value="回退5.2.3版本" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
