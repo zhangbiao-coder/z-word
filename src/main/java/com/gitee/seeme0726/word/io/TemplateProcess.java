@@ -3,7 +3,6 @@ package com.gitee.seeme0726.word.io;
 import com.github.chengyuxing.common.io.IOutput;
 import com.gitee.seeme0726.word.common.IoCommonUtil;
 import com.gitee.seeme0726.word.common.TemplateUtil;
-import com.gitee.seeme0726.word.common.WordCommonUtil;
 import fr.opensagres.xdocreport.core.io.IOUtils;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.openxml4j.opc.PackagePart;
@@ -101,7 +100,7 @@ public class TemplateProcess implements IOutput, AutoCloseable {
         List<XWPFTable> tables = document.getTables();
 
         //找到指定表格
-        XWPFTableCell findCell = WordCommonUtil.findCellByIndex(tables, tablePlaceholderIndex);
+        XWPFTableCell findCell = TemplateUtil.findCellByIndex(tables, tablePlaceholderIndex);
         XWPFTable table = findCell.getTables().get(0);
 
         TemplateUtil.replaceTemplateRows(table, placeholderLocation, placeholderRows, list);
@@ -124,7 +123,7 @@ public class TemplateProcess implements IOutput, AutoCloseable {
     public TemplateProcess addImg(int[] tablePlaceholderIndex, InputStream inputStream, int width, int height, String fileName) throws IOException, InvalidFormatException {
         List<XWPFTable> tables = document.getTables();
         //找到指定表格
-        XWPFTableCell findCell = WordCommonUtil.findCellByIndex(tables, tablePlaceholderIndex);
+        XWPFTableCell findCell = TemplateUtil.findCellByIndex(tables, tablePlaceholderIndex);
         TemplateUtil.insertImg(findCell, inputStream, width, height, fileName);
         return this;
     }
