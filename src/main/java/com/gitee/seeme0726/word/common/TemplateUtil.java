@@ -1,5 +1,6 @@
 package com.gitee.seeme0726.word.common;
 
+import com.github.chengyuxing.common.utils.StringUtil;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.xwpf.usermodel.*;
 import org.apache.xmlbeans.XmlObject;
@@ -7,19 +8,23 @@ import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTRow;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import static com.github.chengyuxing.common.utils.ObjectUtil.coalesce;
+import static com.github.chengyuxing.common.utils.ObjectUtil.getDeepValue;
 
 /**
  * 处理模板占位符的工具类
  */
 public class TemplateUtil {
-    private final static String pattern = "\\$\\{[^}]+}";
-    private static final Pattern compile = Pattern.compile(pattern);
+    @SuppressWarnings("UnnecessaryUnicodeEscape")
+    private static final char BREAK_RUN_CHAR = '\u0e3a';
+    /**
+     * 匹配 $|{ | use|r.id | }
+     */
+    private static final Pattern STRING_TEMPLATE_HOLDER_PATTERN = Pattern.compile("\\$" + BREAK_RUN_CHAR + "?\\{[\\s" + BREAK_RUN_CHAR + "]*(?<key>[\\w." + BREAK_RUN_CHAR + "]+)[\\s" + BREAK_RUN_CHAR + "]*}");
 
     /**
      * 替换段落文本
@@ -27,7 +32,7 @@ public class TemplateUtil {
      * @param document docx解析对象
      * @param textMap  需要替换的信息集合
      */
-    public static void changeText(XWPFDocument document, Map<String, String> textMap) {
+    public static void changeText(XWPFDocument document, Map<String, Object> textMap) {
         // 获取段落集合
         List<XWPFParagraph> paragraphs = document.getParagraphs();
         replaceParagraphsText(paragraphs, textMap);
@@ -54,37 +59,33 @@ public class TemplateUtil {
      * 替换段落占位符的值
      *
      * @param paragraphs 段落
-     * @param textMap    数据集
+     * @param args       数据集
      */
-    public static void replaceParagraphsText(List<XWPFParagraph> paragraphs, Map<String, String> textMap) {
+    public static void replaceParagraphsText(List<XWPFParagraph> paragraphs, Map<String, Object> args) {
         for (XWPFParagraph paragraph : paragraphs) {
             // 获取到段落中的所有文本内容
-            String text = paragraph.getText();
+            String content = paragraph.getText();
             // 判断此段落中是否有需要进行替换的文本
-            if (checkText(text)) {
+            if (checkText(content)) {
                 List<XWPFRun> runs = paragraph.getRuns();
-                for (XWPFRun run : runs) {
-                    //原值
-                    String rtext = run.text();
-                    // 替换模板原来位置
-                    Matcher m = compile.matcher(rtext);
-                    if (m.find()) {
-                        String key = m.group();
-                        String value = textMap.get(getKey(key));
-                        value = value == null ? "--" : value;
-                        if (value.indexOf("\n") > 0) {
-                            String[] texts = value.split("\n");
-                            for (int i = 0; i < texts.length; i++) {
-                                String s = texts[i];
-                                if (i == 0) {
-                                    run.setText(rtext.replace(key, s), 0);
+                String[] newRuns = formatRuns(runs, args);
+                if (newRuns.length <= runs.size()) {
+                    for (int i = 0; i < newRuns.length; i++) {
+                        String nr = newRuns[i];
+                        XWPFRun run = runs.get(i);
+                        if (nr.indexOf("\n") > 0) {
+                            String[] texts = nr.split("\n");
+                            for (int j = 0; j < texts.length; j++) {
+                                String s = texts[j];
+                                if (j == 0) {
+                                    run.setText(s, 0);
                                 } else {
                                     run.addBreak();
-                                    run.setText(s, i);
+                                    run.setText(s, j);
                                 }
                             }
                         } else {
-                            run.setText(rtext.replace(key, value), 0);
+                            run.setText(nr, 0);
                         }
                     }
                 }
@@ -100,7 +101,7 @@ public class TemplateUtil {
      * @param placeholderRows     指定模板行占几行
      * @param list                数据集
      */
-    public static void replaceTemplateRows(XWPFTable table, int placeholderLocation, int placeholderRows, List<Map<String, String>> list) {
+    public static void replaceTemplateRows(XWPFTable table, int placeholderLocation, int placeholderRows, List<Map<String, Object>> list) {
         //获取模板行
         List<XWPFTableRow> temRows = new ArrayList<>();
         for (int i = 0; i < placeholderRows; i++) {
@@ -109,7 +110,7 @@ public class TemplateUtil {
 
         for (int i = 0; i < list.size(); i++) {
             //当前行数据集
-            Map<String, String> map = list.get(i);
+            Map<String, Object> map = list.get(i);
 
             //复制模板行
             for (XWPFTableRow temRow : temRows) {
@@ -148,7 +149,7 @@ public class TemplateUtil {
     public static XWPFPicture insertImg(XWPFTableCell cell, InputStream inputStream, int width, int height, String fileName) throws IOException, InvalidFormatException {
         try {
             //判断图片的格式
-            int pictureType ;
+            int pictureType;
             if (fileName.endsWith(".emf")) {
                 pictureType = XWPFDocument.PICTURE_TYPE_EMF;
             } else if (fileName.endsWith(".wmf")) {
@@ -191,8 +192,8 @@ public class TemplateUtil {
     }
 
 
-    public static String getKey(String g) {
-        return g.substring(2, g.length() - 1);
+    public static String formatValue(String g, Map<String, Object> params) {
+        return StringUtil.FMT.format(g, params);
     }
 
     /**
@@ -205,7 +206,7 @@ public class TemplateUtil {
         return text.contains("$");
     }
 
-    public static XWPFTableCell findCellByIndex(List<XWPFTable> tables,int[] tablePlaceholderIndex){
+    public static XWPFTableCell findCellByIndex(List<XWPFTable> tables, int[] tablePlaceholderIndex) {
         int temTablePlaceholderIndex = tablePlaceholderIndex[0];
         int temRowPlaceholderIndex = tablePlaceholderIndex[1];
         int temCellPlaceholderIndex = tablePlaceholderIndex[2];
@@ -215,4 +216,48 @@ public class TemplateUtil {
         return findCell;
     }
 
+    private static String[] formatRuns(List<XWPFRun> runs, Map<String, Object> args) {
+        String brc = String.valueOf(BREAK_RUN_CHAR);
+        StringJoiner sb = new StringJoiner(brc);
+        for (XWPFRun r : runs) {
+            sb.add(r.text());
+        }
+        Matcher m = STRING_TEMPLATE_HOLDER_PATTERN.matcher(sb.toString());
+        StringBuffer newSb = new StringBuffer();
+        while (m.find()) {
+            int cc = timesOfSubstring(m.group(), brc);
+            String key = m.group("key").replace(brc, "");
+            StringBuilder value = new StringBuilder(coalesce(getDeepValue(args, key), "--").toString());
+            while (cc > 0) {
+                value.append(BREAK_RUN_CHAR);
+                cc--;
+            }
+            m.appendReplacement(newSb, Matcher.quoteReplacement(value.toString()));
+        }
+        m.appendTail(newSb);
+        return newSb.toString().split(brc, -1);
+    }
+
+    private static int timesOfSubstring(String str, String sub) {
+        if (sub.isEmpty()) {
+            return 0;
+        }
+        int times = 0;
+        if (sub.length() == 1) {
+            char c = sub.charAt(0);
+            for (int i = 0; i < str.length(); i++) {
+                if (str.charAt(i) == c) {
+                    times++;
+                }
+            }
+            return times;
+        }
+
+        int fromIndex = 0;
+        while ((fromIndex = str.indexOf(sub, fromIndex)) != -1) {
+            times++;
+            fromIndex += sub.length();
+        }
+        return times;
+    }
 }

@@ -28,7 +28,7 @@ public class TemplateProcess implements IOutput, AutoCloseable {
 
     private final XWPFDocument document;
     // 占位符参数map
-    private final Map<String, String> params = new HashMap<>();
+    private final Map<String, Object> params = new HashMap<>();
 
     private final InputStream templateInputStream;
 
@@ -50,7 +50,7 @@ public class TemplateProcess implements IOutput, AutoCloseable {
      * @param value 值
      * @return Builder对象
      */
-    public TemplateProcess addParam(String key, String value) {
+    public TemplateProcess addParam(String key, Object value) {
         if (key != null && !key.isEmpty()) {
             params.put(key, value);
         }
@@ -63,7 +63,7 @@ public class TemplateProcess implements IOutput, AutoCloseable {
      * @param params 多个参数的map
      * @return Builder对象
      */
-    public TemplateProcess addParams(Map<String, String> params) {
+    public TemplateProcess addParams(Map<String, Object> params) {
         this.params.putAll(params);
         return this;
     }
@@ -77,7 +77,7 @@ public class TemplateProcess implements IOutput, AutoCloseable {
      * @param list                  集合数据
      * @return this
      */
-    public TemplateProcess addTable(int tablePlaceholderIndex, int placeholderLocation, int placeholderRows, List<Map<String, String>> list) {
+    public TemplateProcess addTable(int tablePlaceholderIndex, int placeholderLocation, int placeholderRows, List<Map<String, Object>> list) {
         List<XWPFTable> tables = document.getTables();
 
         //找到指定表格
@@ -96,7 +96,7 @@ public class TemplateProcess implements IOutput, AutoCloseable {
      * @param list                  集合数据
      * @return this
      */
-    public TemplateProcess addTable(int[] tablePlaceholderIndex, int placeholderLocation, int placeholderRows, List<Map<String, String>> list) {
+    public TemplateProcess addTable(int[] tablePlaceholderIndex, int placeholderLocation, int placeholderRows, List<Map<String, Object>> list) {
         List<XWPFTable> tables = document.getTables();
 
         //找到指定表格
@@ -189,10 +189,11 @@ public class TemplateProcess implements IOutput, AutoCloseable {
 
     /**
      * 替换文档中的指定下标图片
-     * @param pictureIndex 要替换的图片的下标序号，从0开始
+     *
+     * @param pictureIndex   要替换的图片的下标序号，从0开始
      * @param newImageStream 新图片的输入流
      * @return this
-     * @throws IOException IOException
+     * @throws IOException            IOException
      * @throws InvalidFormatException InvalidFormatException
      */
     public TemplateProcess replaceImg(int pictureIndex, InputStream newImageStream) throws IOException, InvalidFormatException {
@@ -211,7 +212,6 @@ public class TemplateProcess implements IOutput, AutoCloseable {
         }
         return this;
     }
-
 
 
     @Override
