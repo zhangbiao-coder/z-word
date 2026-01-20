@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31b13a32-48a5-4868-981a-8c181691bd9f" name="更改" comment="回退5.2.3版本">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="31b13a32-48a5-4868-981a-8c181691bd9f" name="更改" comment="模版占位符修复过长和样式导致截断问题，支持路径表达式，参数支持值支持Object">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gitee/seeme0726/word/common/TemplateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gitee/seeme0726/word/common/TemplateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gitee/seeme0726/word/io/TemplateProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gitee/seeme0726/word/io/TemplateProcess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zb/WordTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zb/WordTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +223,7 @@
       <workItem from="1754785941302" duration="15108000" />
       <workItem from="1754892396154" duration="10394000" />
       <workItem from="1768354551952" duration="331000" />
-      <workItem from="1768898783264" duration="12910000" />
+      <workItem from="1768898783264" duration="13583000" />
     </task>
     <task id="LOCAL-00001" summary="允许字符串分段">
       <option name="closed" value="true" />
@@ -325,7 +321,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754900234600</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="模版占位符修复过长和样式导致截断问题，支持路径表达式，参数支持值支持Object">
+      <option name="closed" value="true" />
+      <created>1768914216294</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1768914216294</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -340,7 +344,8 @@
     <MESSAGE value="更新依赖版本,新增替换文档中图片的方法，保留原图片的的位置，大小，布局浮动等属性" />
     <MESSAGE value="回退5.3.0版本" />
     <MESSAGE value="回退5.2.3版本" />
-    <option name="LAST_COMMIT_MESSAGE" value="回退5.2.3版本" />
+    <MESSAGE value="模版占位符修复过长和样式导致截断问题，支持路径表达式，参数支持值支持Object" />
+    <option name="LAST_COMMIT_MESSAGE" value="模版占位符修复过长和样式导致截断问题，支持路径表达式，参数支持值支持Object" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,6 +1,5 @@
 package com.gitee.seeme0726.word.common;
 
-import com.github.chengyuxing.common.utils.StringUtil;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.xwpf.usermodel.*;
 import org.apache.xmlbeans.XmlObject;
@@ -189,11 +188,6 @@ public class TemplateUtil {
 
         }
 
-    }
-
-
-    public static String formatValue(String g, Map<String, Object> params) {
-        return StringUtil.FMT.format(g, params);
     }
 
     /**
