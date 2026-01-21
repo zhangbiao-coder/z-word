@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="31b13a32-48a5-4868-981a-8c181691bd9f" name="更改" comment="模版占位符修复过长和样式导致截断问题，支持路径表达式，参数支持值支持Object">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gitee/seeme0726/word/common/TemplateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gitee/seeme0726/word/common/TemplateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gitee/seeme0726/word/io/TemplateProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gitee/seeme0726/word/io/TemplateProcess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/zb/WordTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zb/WordTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +31,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/zhangbiao-coder/z-word.git&quot;,
-    &quot;accountId&quot;: &quot;b66b67b9-7e59-43e7-aabd-25ffd86593d7&quot;
+    &quot;accountId&quot;: &quot;31129024-01c8-4095-add4-5099c0ee8ee8&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -56,39 +59,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.WordTest.docToHtml.executor": "Run",
-    "JUnit.WordTest.docxToHtml.executor": "Run",
-    "JUnit.WordTest.xWord.executor": "Run",
-    "JUnit.WordTest.xWord2.executor": "Run",
-    "JUnit.WordTest.xWord3.executor": "Run",
-    "JUnit.WordTest.xWord4.executor": "Debug",
-    "JUnit.WordTest.yWord2.executor": "Debug",
-    "Maven.z-word [clean].executor": "Run",
-    "Maven.z-word [compile].executor": "Run",
-    "Maven.z-word [install].executor": "Run",
-    "Maven.z-word [package].executor": "Run",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/zhangbiao/IdeaProjects/mg-app",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.40114942",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.WordTest.docToHtml.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WordTest.docxToHtml.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WordTest.xWord.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WordTest.xWord2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WordTest.xWord3.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WordTest.xWord4.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.WordTest.yWord2.executor&quot;: &quot;Debug&quot;,
+    &quot;Maven.z-word [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.z-word [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.z-word [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.z-word [package].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/zhangbiao/IdeaProjects/mg-app&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.40114942&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JUnit.WordTest.yWord2">
     <configuration name="WordTest.docxToHtml" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="z-word" />
@@ -223,7 +226,8 @@
       <workItem from="1754785941302" duration="15108000" />
       <workItem from="1754892396154" duration="10394000" />
       <workItem from="1768354551952" duration="331000" />
-      <workItem from="1768898783264" duration="13583000" />
+      <workItem from="1768898783264" duration="18397000" />
+      <workItem from="1768958769295" duration="2133000" />
     </task>
     <task id="LOCAL-00001" summary="允许字符串分段">
       <option name="closed" value="true" />
@@ -329,7 +333,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768914216294</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="模版占位符修复过长和样式导致截断问题，支持路径表达式，参数支持值支持Object">
+      <option name="closed" value="true" />
+      <created>1768914794802</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1768914794802</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

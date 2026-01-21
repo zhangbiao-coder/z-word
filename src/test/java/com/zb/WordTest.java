@@ -50,6 +50,7 @@ public class WordTest {
         try (TemplateProcess templateProcess = Words.ofTemplate(new FileResource("file:/Users/chengyuxing/Downloads/mysql配置.docx").getInputStream())) {
             templateProcess
                     .addParams(row)
+                    .setTable(0, 0, 0, "user")
                     .saveTo("/Users/chengyuxing/Downloads/mysql配置结果.docx");
         }
     }

@@ -100,17 +100,15 @@ public class TemplateUtil {
      * @param placeholderRows     指定模板行占几行
      * @param list                数据集
      */
-    public static void replaceTemplateRows(XWPFTable table, int placeholderLocation, int placeholderRows, List<Map<String, Object>> list) {
+    public static void replaceTemplateRows(XWPFTable table, int placeholderLocation, int placeholderRows, Iterable<Map<String, Object>> list) {
         //获取模板行
         List<XWPFTableRow> temRows = new ArrayList<>();
         for (int i = 0; i < placeholderRows; i++) {
             temRows.add(table.getRow(placeholderLocation + i));
         }
 
-        for (int i = 0; i < list.size(); i++) {
-            //当前行数据集
-            Map<String, Object> map = list.get(i);
-
+        int i = 0;
+        for (Map<String, Object> map : list) {
             //复制模板行
             for (XWPFTableRow temRow : temRows) {
                 //复制模板行得到新行
@@ -124,13 +122,13 @@ public class TemplateUtil {
                 }
                 //把新行插入表格，插入下标为（模板行下标 + 模板行数 + 当前遍历下标）
                 table.addRow(newRow, placeholderLocation + placeholderRows + i);
-
+                i++;
             }
         }
 
         //最后移除模板行
-        for (int i = 0; i < placeholderRows; i++) {
-            table.removeRow(placeholderLocation + i);
+        for (int j = 0; j < placeholderRows; j++) {
+            table.removeRow(placeholderLocation + j);
         }
     }
 

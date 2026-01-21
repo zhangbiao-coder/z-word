@@ -17,9 +17,10 @@ import java.awt.image.BufferedImage;
 import java.io.*;
 import java.math.RoundingMode;
 import java.text.NumberFormat;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+
+import static com.github.chengyuxing.common.utils.ObjectUtil.coalesce;
+import static com.github.chengyuxing.common.utils.ObjectUtil.getDeepValue;
 
 /**
  * 模板处理类
@@ -77,13 +78,38 @@ public class TemplateProcess implements IOutput, AutoCloseable {
      * @param list                  集合数据
      * @return this
      */
-    public TemplateProcess addTable(int tablePlaceholderIndex, int placeholderLocation, int placeholderRows, List<Map<String, Object>> list) {
+    public TemplateProcess addTable(int tablePlaceholderIndex, int placeholderLocation, int placeholderRows, Iterable<Map<String, Object>> list) {
         List<XWPFTable> tables = document.getTables();
 
         //找到指定表格
         XWPFTable table = tables.get(tablePlaceholderIndex);
 
         TemplateUtil.replaceTemplateRows(table, placeholderLocation, placeholderRows, list);
+        return this;
+    }
+
+    /**
+     * 根据键名从参数对象中获取一个集合数据增加一个表格
+     *
+     * @param tablePlaceholderIndex 指定模板表格的下标位置
+     * @param placeholderLocation   指定模板行的下标位置
+     * @param placeholderRows       指定模板行占几行
+     * @param key                   来自于参数的键名
+     * @return this
+     */
+    @SuppressWarnings("unchecked")
+    public TemplateProcess setTable(int tablePlaceholderIndex, int placeholderLocation, int placeholderRows, String key) {
+        List<XWPFTable> tables = document.getTables();
+
+        //找到指定表格
+        XWPFTable table = tables.get(tablePlaceholderIndex);
+
+        Object list = coalesce(getDeepValue(params, key), Collections.emptyList());
+        if (!(list instanceof Iterable<?>)) {
+            throw new IllegalArgumentException(key + " is not a Iterable");
+        }
+
+        TemplateUtil.replaceTemplateRows(table, placeholderLocation, placeholderRows, (Iterable<Map<String, Object>>) list);
         return this;
     }
 
@@ -96,7 +122,7 @@ public class TemplateProcess implements IOutput, AutoCloseable {
      * @param list                  集合数据
      * @return this
      */
-    public TemplateProcess addTable(int[] tablePlaceholderIndex, int placeholderLocation, int placeholderRows, List<Map<String, Object>> list) {
+    public TemplateProcess addTable(int[] tablePlaceholderIndex, int placeholderLocation, int placeholderRows, Iterable<Map<String, Object>> list) {
         List<XWPFTable> tables = document.getTables();
 
         //找到指定表格
