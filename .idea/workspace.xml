@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31b13a32-48a5-4868-981a-8c181691bd9f" name="更改" comment="模版占位符修复过长和样式导致截断问题，支持路径表达式，参数支持值支持Object">
+    <list default="true" id="31b13a32-48a5-4868-981a-8c181691bd9f" name="更改" comment="增加方法setTable">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gitee/seeme0726/word/common/TemplateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gitee/seeme0726/word/common/TemplateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gitee/seeme0726/word/io/TemplateProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gitee/seeme0726/word/io/TemplateProcess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zb/WordTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zb/WordTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +225,7 @@
       <workItem from="1754892396154" duration="10394000" />
       <workItem from="1768354551952" duration="331000" />
       <workItem from="1768898783264" duration="18397000" />
-      <workItem from="1768958769295" duration="2133000" />
+      <workItem from="1768958769295" duration="3513000" />
     </task>
     <task id="LOCAL-00001" summary="允许字符串分段">
       <option name="closed" value="true" />
@@ -341,7 +339,15 @@
       <option name="project" value="LOCAL" />
       <updated>1768914794802</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="增加方法setTable">
+      <option name="closed" value="true" />
+      <created>1768960932180</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1768960932180</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,7 +363,8 @@
     <MESSAGE value="回退5.3.0版本" />
     <MESSAGE value="回退5.2.3版本" />
     <MESSAGE value="模版占位符修复过长和样式导致截断问题，支持路径表达式，参数支持值支持Object" />
-    <option name="LAST_COMMIT_MESSAGE" value="模版占位符修复过长和样式导致截断问题，支持路径表达式，参数支持值支持Object" />
+    <MESSAGE value="增加方法setTable" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加方法setTable" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
