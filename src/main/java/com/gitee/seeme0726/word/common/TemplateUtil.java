@@ -11,8 +11,7 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import static com.github.chengyuxing.common.utils.ObjectUtil.coalesce;
-import static com.github.chengyuxing.common.utils.ObjectUtil.getDeepValue;
+import static com.github.chengyuxing.common.util.ValueUtils.*;
 
 /**
  * 处理模板占位符的工具类
@@ -219,7 +218,7 @@ public class TemplateUtil {
         while (m.find()) {
             int cc = timesOfSubstring(m.group(), brc);
             String key = m.group("key").replace(brc, "");
-            StringBuilder value = new StringBuilder(coalesce(getDeepValue(args, key), "--").toString());
+            StringBuilder value = new StringBuilder(coalesceNonNull(getDeepValue(args, key), "--").toString());
             while (cc > 0) {
                 value.append(BREAK_RUN_CHAR);
                 cc--;

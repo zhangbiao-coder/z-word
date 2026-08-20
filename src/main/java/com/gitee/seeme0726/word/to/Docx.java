@@ -9,6 +9,7 @@ import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 
 public class Docx implements IOutput, AutoCloseable {
     private final InputStream inputStream;
@@ -24,7 +25,7 @@ public class Docx implements IOutput, AutoCloseable {
     /**
      * word2003
      */
-    public Docx html() throws  IOException {
+    public Docx html() throws IOException {
         XHTMLOptions xhtmlOptions = XHTMLOptions.create();
         // 是否忽略未使用的样式
         xhtmlOptions.setIgnoreStylesIfUnused(false);
@@ -37,10 +38,9 @@ public class Docx implements IOutput, AutoCloseable {
         return this;
     }
 
-
     @Override
-    public byte[] toBytes() {
-        return outputStream.toByteArray();
+    public void writeTo(OutputStream out) throws IOException {
+        outputStream.writeTo(out);
     }
 
     @Override

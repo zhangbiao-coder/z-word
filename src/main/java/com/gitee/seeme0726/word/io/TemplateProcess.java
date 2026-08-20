@@ -19,8 +19,7 @@ import java.math.RoundingMode;
 import java.text.NumberFormat;
 import java.util.*;
 
-import static com.github.chengyuxing.common.utils.ObjectUtil.coalesce;
-import static com.github.chengyuxing.common.utils.ObjectUtil.getDeepValue;
+import static com.github.chengyuxing.common.util.ValueUtils.*;
 
 /**
  * 模板处理类
@@ -104,7 +103,7 @@ public class TemplateProcess implements IOutput, AutoCloseable {
         //找到指定表格
         XWPFTable table = tables.get(tablePlaceholderIndex);
 
-        Object list = coalesce(getDeepValue(params, key), Collections.emptyList());
+        Object list = coalesceNonNull(getDeepValue(params, key), Collections.emptyList());
         if (!(list instanceof Iterable<?>)) {
             throw new IllegalArgumentException(key + " is not a Iterable");
         }
@@ -239,14 +238,10 @@ public class TemplateProcess implements IOutput, AutoCloseable {
         return this;
     }
 
-
     @Override
-    public byte[] toBytes() throws IOException {
-        try (ByteArrayOutputStream stream = new ByteArrayOutputStream()) {
-            TemplateUtil.changeText(document, params);
-            document.write(stream);
-            return stream.toByteArray();
-        }
+    public void writeTo(OutputStream out) throws IOException {
+        TemplateUtil.changeText(document, params);
+        document.write(out);
     }
 
     @Override

@@ -17,14 +17,14 @@ public class WordTest {
     @Test
     public void docToHtml() throws Exception {
         try (Doc doc = Words.docTo(new FileResource("file:/D:/ces.doc").getInputStream())) {
-            doc.html().saveTo("D:/ces.html");
+            doc.html().writeTo("D:/ces.html");
         }
     }
 
     @Test
     public void docxToHtml() throws Exception {
         try (Docx docx = Words.docxTo(new FileResource("file:/C:/temp/zwordTest.docx").getInputStream())) {
-            docx.html().saveTo("C:/temp/zwordTest.html");
+            docx.html().writeTo("C:/temp/zwordTest.html");
         }
     }
 
@@ -37,7 +37,7 @@ public class WordTest {
                     .addParam("b", "bbbbbbbbbbbbbbbbbbbbbbb")
                     .addParam("c", "ccccccccccccccccccccccc")
                     .addImg(new int[]{0, 0, 0}, new FileResource("file:/C:/Users/张彪/Pictures/1087462.jpg").getInputStream())
-                    .saveTo("C:/temp/zwordTestSuccess.docx");
+                    .writeTo("C:/temp/zwordTestSuccess.docx");
         }
     }
 
@@ -50,8 +50,8 @@ public class WordTest {
         try (TemplateProcess templateProcess = Words.ofTemplate(new FileResource("file:/Users/chengyuxing/Downloads/mysql配置.docx").getInputStream())) {
             templateProcess
                     .addParams(row)
-                    .setTable(0, 0, 0, "user")
-                    .saveTo("/Users/chengyuxing/Downloads/mysql配置结果.docx");
+                    //.setTable(0, 0, 0, "user")
+                    .writeTo("/Users/chengyuxing/Downloads/mysql配置结果.docx");
         }
     }
 
@@ -62,7 +62,7 @@ public class WordTest {
             templateProcess.addParam("b", "測試到處\nl\n我在测试啦啦啦")
                     .addTable(new int[]{0, 2, 0}, 1, 1, list)
                     .addImg(new int[]{0, 0, 0}, new FileResource("file:/D:/1.jpg").getInputStream(), "1.jpg")
-                    .saveTo("D:/b.docx");
+                    .writeTo("D:/b.docx");
         }
     }
 
@@ -100,7 +100,7 @@ public class WordTest {
                     .addParam("c", "ccccccccccccccccccccccc")
                     .addImg(new int[]{0, 0, 0}, new FileResource("file:/C:/temp/2.png").getInputStream())
                     .replaceImg(0, new FileResource("file:/C:/temp/1.gif").getInputStream())
-                    .saveTo("C:/temp/zwordTestSuccess.docx");
+                    .writeTo("C:/temp/zwordTestSuccess.docx");
         }
     }
 
@@ -114,7 +114,7 @@ public class WordTest {
                     .addParam("c", "ccccccccccccccccccccccc")
                     .addImg(new int[]{0, 0, 0}, new FileResource("file:/C:/temp/2.png").getInputStream())
                     .replaceImg(0, new ByteArrayInputStream(new byte[0]))
-                    .saveTo("C:/temp/zwordTestSuccess.docx");
+                    .writeTo("C:/temp/zwordTestSuccess.docx");
         }
     }
 

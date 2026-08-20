@@ -55,8 +55,8 @@ public class Doc implements IOutput, AutoCloseable {
 
 
     @Override
-    public byte[] toBytes() {
-        return outputStream.toByteArray();
+    public void writeTo(OutputStream out) throws IOException {
+        outputStream.writeTo(out);
     }
 
     @Override
