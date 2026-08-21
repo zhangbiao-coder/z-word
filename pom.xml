@@ -14,7 +14,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <poi.version>5.2.3</poi.version>
         <xdocreport.version>2.0.4</xdocreport.version>
-        <rabbit.common.version>3.2.8</rabbit.common.version>
+        <rabbit.common.version>3.2.9</rabbit.common.version>
     </properties>
 
     <dependencies>

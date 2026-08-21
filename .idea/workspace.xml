@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="31b13a32-48a5-4868-981a-8c181691bd9f" name="更改" comment="1.1.5">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gitee/seeme0726/word/common/TemplateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gitee/seeme0726/word/common/TemplateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gitee/seeme0726/word/io/TemplateProcess.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gitee/seeme0726/word/io/TemplateProcess.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gitee/seeme0726/word/to/Doc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gitee/seeme0726/word/to/Doc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gitee/seeme0726/word/to/Docx.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gitee/seeme0726/word/to/Docx.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/zb/WordTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zb/WordTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="31b13a32-48a5-4868-981a-8c181691bd9f" name="更改" comment="更新依赖" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,61 +44,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="1.5288823212796274E-165" />
-      <entry key="S2" value="9.214823338652053E-42" />
-      <entry key="S5" value="5.756814708667325E-17" />
-      <entry key="S10" value="1.0703864641646263E-8" />
-      <entry key="S30" value="0.0034971951079310515" />
-      <entry key="S60" value="0.08516708691887258" />
-      <entry key="M2" value="0.5027555754264551" />
-      <entry key="M5" value="2.278144458817086" />
-      <entry key="M10" value="4.365272042090108" />
-      <entry key="M15" value="5.5137728378971875" />
-      <entry key="M30" value="7.018836379497999" />
-      <entry key="H1" value="7.940964740852882" />
-      <entry key="H2" value="8.452100309374556" />
-      <entry key="H4" value="8.721285506187462" />
-      <entry key="D1" value="8.952870952465005" />
-      <entry key="W1" value="8.993250510774184" />
+      <entry key="MS100" value="1.00000000008884" />
+      <entry key="MS500" value="1.0102229591499974" />
+      <entry key="S2" value="1.4605607324216863" />
+      <entry key="S5" value="2.0928883443336677" />
+      <entry key="S10" value="2.4741402587033345" />
+      <entry key="S30" value="2.8054441043138496" />
+      <entry key="S60" value="2.901430791763204" />
+      <entry key="M2" value="3.012708381159004" />
+      <entry key="M5" value="3.9743741287333836" />
+      <entry key="M10" value="5.874375164201127" />
+      <entry key="M15" value="7.176282826350366" />
+      <entry key="M30" value="9.110090195068874" />
+      <entry key="H1" value="10.409446390576525" />
+      <entry key="H2" value="11.164423238690722" />
+      <entry key="H4" value="11.571602354438006" />
+      <entry key="D1" value="11.927079174506442" />
+      <entry key="W1" value="11.989544846207602" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0" />
-      <entry key="S2" value="1.0" />
-      <entry key="S5" value="1.0000000000001181" />
-      <entry key="S10" value="1.0000008480313247" />
-      <entry key="S30" value="1.0367046278394747" />
-      <entry key="S60" value="1.583528771788671" />
-      <entry key="M2" value="3.724619678847739" />
-      <entry key="M5" value="9.444758867085868" />
-      <entry key="M10" value="14.261754638832407" />
-      <entry key="M15" value="16.595187887860035" />
-      <entry key="M30" value="19.458999316108564" />
-      <entry key="H1" value="21.134033466040755" />
-      <entry key="H2" value="22.041630256564623" />
-      <entry key="H4" value="22.514266853838066" />
-      <entry key="D1" value="22.9181173035149" />
-      <entry key="W1" value="22.9882795310319" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="1.2349635794771422E-216" />
+      <entry key="S2" value="1.0541770022419905E-54" />
+      <entry key="S5" value="2.565460988616494E-22" />
+      <entry key="S10" value="1.6017070081012313E-11" />
+      <entry key="S30" value="2.613259912345878E-4" />
+      <entry key="S60" value="0.025141416528070268" />
+      <entry key="M2" value="0.4693143415414969" />
+      <entry key="M5" value="4.124237163935981" />
+      <entry key="M10" value="9.424305133980159" />
+      <entry key="M15" value="12.590213441522293" />
+      <entry key="M30" value="16.949073471504068" />
+      <entry key="H1" value="19.72400575347396" />
+      <entry key="H2" value="21.29364835386989" />
+      <entry key="H4" value="22.128959388361743" />
+      <entry key="D1" value="22.852276407319856" />
+      <entry key="W1" value="22.978833256451846" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.0025241266223388526" />
-      <entry key="MS500" value="0.30228891895834037" />
-      <entry key="S2" value="0.7414904413795741" />
-      <entry key="S5" value="0.8872422668434478" />
-      <entry key="S10" value="0.9419362073683956" />
-      <entry key="S30" value="1.019804377406459" />
-      <entry key="S60" value="1.6523849281608403" />
-      <entry key="M2" value="4.202652064360625" />
-      <entry key="M5" value="11.688468847606613" />
-      <entry key="M10" value="18.597758647648515" />
-      <entry key="M15" value="22.085360445112276" />
-      <entry key="M30" value="26.463466560181814" />
-      <entry key="H1" value="29.067049947341733" />
-      <entry key="H2" value="30.489547906113014" />
-      <entry key="H4" value="31.233406524401083" />
-      <entry key="D1" value="31.870622836472336" />
-      <entry key="W1" value="31.981477645684855" />
+      <entry key="MS100" value="0.9794202976745439" />
+      <entry key="MS500" value="1.0060431460466577" />
+      <entry key="S2" value="1.459101194469876" />
+      <entry key="S5" value="2.0920411369328153" />
+      <entry key="S10" value="2.4736336385507767" />
+      <entry key="S30" value="2.805506901585611" />
+      <entry key="S60" value="2.9262130152861734" />
+      <entry key="M2" value="3.4788564831827595" />
+      <entry key="M5" value="8.083554168665577" />
+      <entry key="M10" value="15.279329340499011" />
+      <entry key="M15" value="19.748584610715625" />
+      <entry key="M30" value="26.046644477658607" />
+      <entry key="H1" value="30.126032447415025" />
+      <entry key="H2" value="32.454030004973696" />
+      <entry key="H4" value="33.69845219769433" />
+      <entry key="D1" value="34.77899113992248" />
+      <entry key="W1" value="34.96832571775402" />
     </decayedShown>
   </component>
   <component name="ProblemsViewState">
@@ -453,7 +445,8 @@
     <MESSAGE value="模版占位符修复过长和样式导致截断问题，支持路径表达式，参数支持值支持Object" />
     <MESSAGE value="增加方法setTable" />
     <MESSAGE value="1.1.5" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.1.5" />
+    <MESSAGE value="更新依赖" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新依赖" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
